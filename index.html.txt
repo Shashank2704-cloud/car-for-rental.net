@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FastRide Car Rentals</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1571127230648-209d20030dbb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .car-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .car-card {
+      background: #fff;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .car-card h3, .car-card p {
+      margin: 10px;
+    }
+
+    .car-card button {
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .car-card button:hover {
+      background: #0056b3;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FastRide Car Rentals</h1>
+    <nav>
+      <a href="#cars">Cars</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Drive Your Dream Ride Today</h2>
+  </section>
+
+  <section id="cars" class="section">
+    <h2>Available Cars</h2>
+    <div class="car-list">
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1589394814641-bd04b1786d3d?auto=format&fit=crop&w=600&q=80" alt="Maruti Swift">
+        <h3>Maruti Swift</h3>
+        <p>₹1200/day</p>
+        <button onclick="alert('Booking Maruti Swift')">Book Now</button>
+      </div>
+      <div class="car-card">
+        <img src="https://images.unsplash.com/photo-1571601037354-186e9f6837e8?auto=format&fit=crop&w=600&q=80" alt="Honda City">
+        <h3>Honda City</h3>
+        <p>₹1800/day</p>
+        <button onclick="alert('Booking Honda City')">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="section">
+    <h2>Book Your Ride</h2>
+    <form onsubmit="event.preventDefault(); alert('Booking submitted!');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select required>
+        <option value="">Select Car</option>
+        <option value="Swift">Maruti Swift</option>
+        <option value="City">Honda City</option>
+      </select>
+      <input type="date" required>
+      <input type="date" required>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Phone: +91 9876543210</p>
+    <p>Email: fastride@example.com</p>
+    <p>Location: Indore, Madhya Pradesh</p>
+  </section>
+
+  <footer>
+    <p>© 2025 FastRide Rentals. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
